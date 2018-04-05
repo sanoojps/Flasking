@@ -25,9 +25,25 @@ Created on Wed Apr  4 20:51:46 2018
     |-requirements.txt
     |-config.py
     |-manage.py
+    
+This structure has four top-level folders:
+    • The Flask application lives inside a package generically named app.
+    • The migrations folder contains the database migration scripts, as before.
+    • Unit tests are written in a tests package.
+    • The venv folder contains the Python virtual environment, as before.
+There are also a few new files:
+    • requirements.txt lists the package dependencies 
+        so that it is easy to regenerate an
+        identical virtual environment on a different computer.
+    • config.py stores the configuration settings.
+    • manage.py launches the application and other application tasks.
+    
 """
 
 #python code to create flask project structure
+
+path_to_one_drive = \
+"C:\\Users\\sanooj\\OneDrive\\Books_Not_Sorted_yet\\Python\\flask\\LargeApp"
 
 import os
 def create_flasky_flask(path=os.path.expanduser("~"), directory="flasky", 
@@ -142,4 +158,4 @@ def create_flasky_flask(path=os.path.expanduser("~"), directory="flasky",
         
         open(full_file_path,"a").close()
         
-create_flasky_flask()
+create_flasky_flask(path=path_to_one_drive,app_name="large_app")
